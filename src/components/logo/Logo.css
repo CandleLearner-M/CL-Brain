@@ -1,0 +1,13 @@
+.tilt {
+  height: 150px;
+  width: 150px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  background: url(background.jpg) center/cover no-repeat;
+  transition: all 0.4s ease;
+}
+.tilt:hover {
+  height: 160px;
+  width: 160px;
+}
