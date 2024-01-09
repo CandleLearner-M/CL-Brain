@@ -3,7 +3,7 @@ import './ImageLinkForum.css';
 
 function ImageLinkForum() {
   return (
-    <div >
+    <div className="inline-block">
       <p className="f3 center tc">This magic Brain will detect the faces in your image. Give it a try...</p>
       <div className="center">
         <div className="form pa4 shadow-5 center br3">
@@ -12,7 +12,7 @@ function ImageLinkForum() {
             type="text"
             placeholder="Enter the Image URL here"
           />
-          <button className="w-30 grow hover-effect f4 pv2 ph3 bg-black white br2 ba b--white">Detect</button>
+          <button className="w-30 grow hover-effect f4 pv2 ph3 bg-purple white br2 ba b--white">Detect</button>
         </div>
       </div>
     </div>

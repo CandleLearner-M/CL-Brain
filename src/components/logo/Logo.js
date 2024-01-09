@@ -5,9 +5,11 @@ import "./Logo.css";
 
 function Logo() {
   return (
-    <Tilt className="grow tilt ma3 shadow-3 br2 ">
-      <img src={logo} className="logo" alt="logo" />
-    </Tilt>
+    <div className="inline-block">
+      <Tilt className="grow tilt ma3 shadow-3 br2 ">
+        <img src={logo} className="logo grow" alt="logo" />
+      </Tilt>
+    </div>
   );
 }
 
