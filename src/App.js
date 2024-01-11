@@ -6,6 +6,7 @@ import Rank from "./components/Rank/Rank";
 import BackgroundEffect from "./components/BackgroundEffect";
 import { Component } from "react";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
+import Login from "./components/login/Login";
 
 function returnClarifaiRequestOption(imageURL) {
   const PAT = "5851bf812aee43c7b596e389ae7a999a";
@@ -127,6 +128,7 @@ class App extends Component {
       <div className="App white w-100">
         <div className=" bg-image"></div>
         <BackgroundEffect className="w-100" />
+        <Login />
         <Navigation />
         <Logo />
         <Rank />
