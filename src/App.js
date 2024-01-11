@@ -57,6 +57,24 @@ class App extends Component {
     };
   }
 
+  calcPosition = (data) => {
+    const positionsBox = data.outputs[0].data.regions[0].region_info.bounding_box;
+    const image = document.getElementById('inputImage');
+    const height = Number(image.height);
+    const width = Number(image.width);
+
+    return ({
+      left: positionsBox.left_col * width,
+      top: positionsBox.top_row * height,
+      right: width - (positionsBox.right_col * width),
+      bottom: height - (positionsBox.bottom_row * height),
+    })
+  }
+
+  displayFaceBox = (box) => {
+    this.setState({box: box})
+  }
+
   onInputChange = (event) => {
     this.setState({ input: event.target.value });
   };
@@ -68,10 +86,7 @@ class App extends Component {
       returnClarifaiRequestOption(this.state.input)
     )
     .then((response) => response.json())
-    .then((result) => {
-      const regions = result.outputs[0].data.regions;
-      console.log(regions)
-    })
+    .then((result) => this.displayFaceBox(this.calcPosition(result)))
     .catch((error) => console.log("error", error));
     // .then((result) => {
       //   const regions = result.outputs[0].data.regions;
