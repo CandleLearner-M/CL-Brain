@@ -2,12 +2,12 @@ import React from "react";
 
 function Rank() {
   return (
-    <div className="center pa0 items-center">
-      <div className="f3 ma0">
+    <div className="center pa0 items-center flex-column ">
+      <div className="f3 ">
         <p>{"CandleLearner, Your current Rank is"}</p>
-      </div>
+      </div> 
       <div
-        className="f1 ma0 ml3"  >
+        className=" f1 ml3 db"  >
         <p>{"#1"}</p>
       </div>
     </div>
