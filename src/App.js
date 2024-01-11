@@ -53,6 +53,7 @@ class App extends Component {
     this.state = {
       input: " ",
       imageURL: "",
+      box: {},
     };
   }
 
@@ -66,10 +67,15 @@ class App extends Component {
       "https://api.clarifai.com/v2/models/" + "face-detection" + "/outputs",
       returnClarifaiRequestOption(this.state.input)
     )
-      .then((response) => response.json())
-      .then((result) => {
-        const regions = result.outputs[0].data.regions;
-        console.log(regions);
+    .then((response) => response.json())
+    .then((result) => {
+      const regions = result.outputs[0].data.regions;
+      console.log(regions)
+    })
+    .catch((error) => console.log("error", error));
+    // .then((result) => {
+      //   const regions = result.outputs[0].data.regions;
+      //   console.log(regions);
 
       //   regions.forEach((region) => {
       //     // Accessing and rounding the bounding box values
@@ -84,15 +90,22 @@ class App extends Component {
       //       const name = concept.name;
       //       const value = concept.value.toFixed(4);
 
+      //       this.setState({
+      //         box: {
+      //           top: topRow * 100,
+      //           bottom: bottomRow * 100,
+      //           left: leftCol * 100,
+      //           right: rightCol * 100,
+      //         },
+      //       });
+
       //       console.log(
       //         `${name}: ${value} BBox: ${topRow}, ${leftCol}, ${bottomRow}, ${rightCol}`
       //       );
       //     });
       //   });
       // })
-      // .catch((error) => console.log("error", error));
-  })
-}
+  };
 
   render() {
     return (
@@ -106,7 +119,7 @@ class App extends Component {
           onInputChange={this.onInputChange}
           onButtonClick={this.onButtonClick}
         />
-        <FaceRecognition imageURL={this.state.imageURL} />
+        <FaceRecognition imageURL={this.state.imageURL} box={this.state.box} />
       </div>
     );
   }
