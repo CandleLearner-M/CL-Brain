@@ -50,8 +50,8 @@ code {
   background-color: #555; /* color of the thumb on hover */
 }
 
-
 .mxW-5 {
-  max-width: 50vw;
+  max-width: 35%;
+  min-width: 25%;
   height: auto;
 }
