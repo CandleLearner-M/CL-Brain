@@ -48,7 +48,7 @@ function returnClarifaiRequestOption(imageURL) {
 // https://api.clarifai.com/v2/models/{YOUR_MODEL_ID}/outputs
 // this will default to the latest version_id
 
-class App extends Component {
+class App extends Compoent {
   constructor() {
     super();
     this.state = {
