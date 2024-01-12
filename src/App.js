@@ -44,11 +44,7 @@ function returnClarifaiRequestOption(imageURL) {
   return requestOptions;
 }
 
-// NOTE: MODEL_VERSION_ID is optional, you can also call prediction with the MODEL_ID only
-// https://api.clarifai.com/v2/models/{YOUR_MODEL_ID}/outputs
-// this will default to the latest version_id
-
-class App extends Component {
+class App extend Component {
   constructor() {
     super();
     this.state = {
