@@ -8,7 +8,7 @@ import { Component } from "react";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Login from "./components/login/Login";
 
-function returnClarifaiRequestOption(imageUR) {
+function returnClarifaiRequestOption(imageURL) {
   const PAT = "5851bf812aee43c7b596e389ae7a999a";
 
   const USER_ID = "candlelearner";
