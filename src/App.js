@@ -44,7 +44,7 @@ function returnClarifaiRequestOption(imageURL) {
   return requestOptions;
 }
 
-class App extend Component {
+class App extends Component {
   constructor() {
     super();
     this.state = {
