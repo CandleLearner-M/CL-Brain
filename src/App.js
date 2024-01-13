@@ -54,7 +54,7 @@ class App extends Component {
     };
   }
 
-  calcPosition = (dta) => {
+  calcPosition = (data) => {
     const positionsBox = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputImage');
     const height = Number(image.height);
