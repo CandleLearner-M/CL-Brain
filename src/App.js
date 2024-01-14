@@ -68,7 +68,7 @@ class App extends Component {
     })
   }
 
-  displayFaceBox = (bo) => {
+  displayFaceBox = (box) => {
     this.setState({box: box})
   }
 
