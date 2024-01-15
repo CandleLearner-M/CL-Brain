@@ -122,7 +122,8 @@ class App extends Component {
   };
 
   onRouteChange =  () => {
-    this.setState({ route: "fhjk" });
+    if(this.state.route ==='signin' ) this.setState({ route: "home" });
+    else if(this.state.route === 'home') this.setState({ route: "signin"})
   };
 
   render() {
@@ -134,7 +135,7 @@ class App extends Component {
           <Login onRouteChange={this.onRouteChange}/>
         ) : (
           <>
-            <Navigation />
+            <Navigation onRouteChange={this.onRouteChange}/>
             <Logo />
             <Rank />
             <ImageLinkForum

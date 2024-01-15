@@ -1,9 +1,9 @@
 import React from "react";
 
-function Navigation() {
+function Navigation({onRouteChange}) {
   return (
     <nav className="flex justify-end ">
-      <p className="f4 link dim underline pa2 pointer">Sign Out</p>
+      <p className="f4 link dim underline pa2 pointer" onClick={onRouteChange}>Sign Out</p>
     </nav>
   );
 }
