@@ -121,13 +121,17 @@ class App extends Component {
     // })
   };
 
+  onRouteChange =  () => {
+    this.setState({ route: "fhjk" });
+  };
+
   render() {
     return (
       <div className="App white w-100">
         <div className=" bg-image"></div>
         <BackgroundEffect className="w-100" />
         {this.state.route === "signin" ? (
-          <Login />
+          <Login onRouteChange={this.onRouteChange}/>
         ) : (
           <>
             <Navigation />

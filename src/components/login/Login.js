@@ -1,6 +1,6 @@
 import React from "react";
 
-function Login() {
+function Login({onRouteChange}) {
   return (
     <article className="backgroundWhite br3 shadow-5 ba b--black-10 mv4 w-100 w-40-m w-25-l mw6 center">
       <main className="pa4 black-80">
@@ -35,6 +35,7 @@ function Login() {
               className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
               type="submit"
               value="Sign in"
+              onClick={onRouteChange}
             />
           </div>
           <div className="lh-copy mt3">
