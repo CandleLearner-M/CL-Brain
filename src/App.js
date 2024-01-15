@@ -121,9 +121,8 @@ class App extends Component {
     // })
   };
 
-  onRouteChange =  () => {
-    if(this.state.route ==='signin' ) this.setState({ route: "home" });
-    else if(this.state.route === 'home') this.setState({ route: "signin"})
+  onRouteChange =  (route) => {
+    this.setState({ route: route });
   };
 
   render() {
