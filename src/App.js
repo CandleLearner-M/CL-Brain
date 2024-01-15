@@ -127,7 +127,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App white w-100">
+      <div className="App white w-100 ">
         <div className=" bg-image"></div>
         <BackgroundEffect className="w-100" />
         {this.state.route === "signin" ? (
