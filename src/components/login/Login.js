@@ -2,7 +2,7 @@ import React from "react";
 
 function Login() {
   return (
-    <article className="br3 shadow-5 ba dark-gray b--black-10 mv4 w-100 w-70-m w-25-l mw5 center">
+    <article className="backgroundWhite br3 shadow-5 ba b--black-10 mv4 w-100 w-40-m w-25-l mw6 center">
       <main className="pa4 black-80">
         <form className="measure">
           <fieldset id="sign_up" className="ba b--transparent ph0 mh0">
@@ -29,9 +29,6 @@ function Login() {
                 id="password"
               />
             </div>
-            <label className="pa0 ma0 lh-copy f6 pointer">
-              <input type="checkbox" /> Remember me
-            </label>
           </fieldset>
           <div className="">
             <input
@@ -42,11 +39,9 @@ function Login() {
           </div>
           <div className="lh-copy mt3">
             <a href="#0" className="f6 link dim black db">
-              Sign up
+              Register
             </a>
-            <a href="#0" className="f6 link dim black db">
-              Forgot your password?
-            </a>
+            
           </div>
         </form>
       </main>
