@@ -4,6 +4,7 @@
   border: 1px black;
   display: flex;
   flex-wrap: wrap;
+  margin: 1rem;
   justify-content: center;
   cursor: pointer;
 };
