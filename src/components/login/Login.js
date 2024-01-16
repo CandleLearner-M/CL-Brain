@@ -39,9 +39,11 @@ function Login({ onRouteChange }) {
             />
           </div>
           <div className="lh-copy mt3">
-            <a href="#0" className="f6 link dim black db">
+            <p
+            onClick={() => onRouteChange('register')}
+            href="#0" className="f6 link dim black db pointer">
               Register 
-            </a>
+            </p>
           </div>
         </form>
       </main>

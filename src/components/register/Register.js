@@ -45,8 +45,8 @@ function Register({ onRouteChange }) {
             <input
               className="b ph3 pv2 input-reset ba b--black bg-transparent grow pointer f6 dib"
               type="submit"
-              value="Sign in"
-              onClick={() => onRouteChange("register")}
+              value="Register"
+              onClick={() => onRouteChange("home")}
             />
           </div>
         </form>
