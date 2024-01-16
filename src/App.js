@@ -126,12 +126,14 @@ class App extends Component {
     this.setState({ route: route });
   };
 
+  isSignedIn = this.state.route === 'home' ? true : false;
+
   render() {
     return (
       <div className="App white w-100 ">
         <div className=" bg-image"></div>
         <BackgroundEffect className="w-100" />
-        <Navigation onRouteChange={this.onRouteChange}/>
+        <Navigation onRouteChange={this.onRouteChange} isSignedIn={this.isSignedIn}/>
         {this.state.route === "signin" ? (
           <Login onRouteChange={this.onRouteChange}/>
         ) : ( this.state.route === "home" ? (
