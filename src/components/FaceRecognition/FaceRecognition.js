@@ -3,8 +3,8 @@ import './FaceRecogntion.css'
 
 function FaceRecognition({ imageURL, box }) {
   return (
-    <div className="center ma">
-      <div className="absolute mt2 center">
+    <div className="center ma3 mb3">
+      <div className="absolute mt2 center mb3">
         
       <img
         alt=" "
