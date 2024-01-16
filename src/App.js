@@ -7,6 +7,7 @@ import BackgroundEffect from "./components/BackgroundEffect";
 import { Component } from "react";
 import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
 import Login from "./components/login/Login";
+import Register from "./components/register/Register";
 
 function returnClarifaiRequestOption(imageURL) {
   const PAT = "5851bf812aee43c7b596e389ae7a999a";
@@ -132,7 +133,8 @@ class App extends Component {
         <BackgroundEffect className="w-100" />
         {this.state.route === "signin" ? (
           <Login onRouteChange={this.onRouteChange}/>
-        ) : (
+        ) : ( this.state.route === "home" ? (
+
           <>
             <Navigation onRouteChange={this.onRouteChange}/>
             <Logo />
@@ -140,12 +142,15 @@ class App extends Component {
             <ImageLinkForum
               onInputChange={this.onInputChange}
               onButtonClick={this.onButtonClick}
-            />
+              />
             <FaceRecognition
               imageURL={this.state.imageURL}
               box={this.state.box}
-            />
+              />
           </>
+              ) : (
+                <Register onRouteChange={this.onRouteChange}/>
+              )
         )}
       </div>
     );
