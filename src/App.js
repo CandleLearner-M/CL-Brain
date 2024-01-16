@@ -131,12 +131,12 @@ class App extends Component {
       <div className="App white w-100 ">
         <div className=" bg-image"></div>
         <BackgroundEffect className="w-100" />
+        <Navigation onRouteChange={this.onRouteChange}/>
         {this.state.route === "signin" ? (
           <Login onRouteChange={this.onRouteChange}/>
         ) : ( this.state.route === "home" ? (
 
           <>
-            <Navigation onRouteChange={this.onRouteChange}/>
             <Logo />
             <Rank />
             <ImageLinkForum
