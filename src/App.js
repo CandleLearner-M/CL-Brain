@@ -126,7 +126,7 @@ class App extends Component {
     this.setState({ route: route });
   };
 
-  isSignedIn = this.state.route === 'home' ? true : false;
+  // isSignedIn = this.state.route === 'home' ? true : false;
 
   render() {
     return (
